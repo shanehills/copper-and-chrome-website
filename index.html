@@ -12,11 +12,11 @@
   <meta property="og:description" content="Small batch. Big character. Berkshire brewed.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://copperandchrome.co.uk">
-  <meta property="og:image" content="https://copperandchrome.co.uk/images/primary.png">
+  <meta property="og:image" content="https://copperandchrome.co.uk/Images/primary.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Copper &amp; Chrome Brewery">
   <meta name="twitter:description" content="Small batch. Big character. Berkshire brewed.">
-  <meta name="twitter:image" content="https://copperandchrome.co.uk/images/primary.png">
+  <meta name="twitter:image" content="https://copperandchrome.co.uk/Images/primary.png">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -90,16 +90,15 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-image: url('./images/primary.png');
+      background-image: url('./Images/primary.png');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
-      opacity: 0.25;
+      opacity: 0.08;
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Wrapper keeping all interactive content crisp and on top */
     .site-content-wrapper {
       position: relative;
       z-index: 1;
@@ -109,27 +108,11 @@
       width: 100%;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-      font-family: var(--font-heading);
-      margin: 0;
-    }
+    h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); margin: 0; }
+    p { margin: 0; }
+    a { color: inherit; text-decoration: inherit; }
+    img { display: block; max-width: 100%; height: auto; }
 
-    p {
-      margin: 0;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: inherit;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* Container Utilities */
     .max-w-7xl { max-width: 80rem; }
     .max-w-4xl { max-width: 56rem; }
     .max-w-3xl { max-width: 48rem; }
@@ -137,7 +120,6 @@
     .max-w-content { max-width: 72rem; }
     .mx-auto { margin-left: auto; margin-right: auto; }
 
-    /* Flex / Grid */
     .flex { display: flex; }
     .grid { display: grid; }
     .items-center { align-items: center; }
@@ -146,7 +128,6 @@
     .flex-col { flex-direction: column; }
     .shrink-0 { flex-shrink: 0; }
 
-    /* Spacing */
     .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
     .px-8 { padding-left: 2rem; padding-right: 2rem; }
     .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
@@ -173,7 +154,6 @@
     .gap-base { gap: 1.5rem; }
     .gap-xl { gap: 3rem; }
 
-    /* Typography Utilities */
     .text-center { text-align: center; }
     .text-xs { font-size: 0.75rem; line-height: 1rem; }
     .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
@@ -188,7 +168,6 @@
     .leading-tight { line-height: 1.25; }
     .leading-relaxed { line-height: 1.625; }
 
-    /* Responsive */
     .hidden { display: none; }
     @media (min-width: 768px) {
       .md\:flex { display: flex; }
@@ -199,7 +178,6 @@
       .md\:text-xl { font-size: 1.25rem; line-height: 1.75rem; }
     }
 
-    /* Mobile Nav Dropdown */
     #mobile-menu {
       display: none;
       background: hsl(var(--surface-deep) / 0.98);
@@ -215,27 +193,23 @@
 </head>
 <body>
 
-  <!-- Full-Width Background Watermark Layer -->
+  <!-- Background Watermark -->
   <div class="site-bg-watermark"></div>
 
-  <!-- Page Content -->
   <div class="site-content-wrapper">
-
     <!-- Header -->
     <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: linear-gradient(to bottom, hsl(var(--surface-deep) / 0.95) 0%, hsl(var(--surface-deep) / 0.7) 100%); backdrop-filter: blur(4px);">
       <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a class="flex items-center shrink-0" href="#">
-          <img alt="Copper and Chrome Brewery" src="./images/primary.png" style="max-height: 52px; width: auto; object-fit: contain;">
+          <img alt="Copper and Chrome Brewery" src="./Images/primary.png" style="max-height: 52px; width: auto; object-fit: contain;">
         </a>
         
-        <!-- Desktop Navigation -->
         <nav aria-label="Main navigation" class="hidden md:flex items-center gap-8">
           <a href="#beers" class="text-sm font-medium tracking-wide" style="color: hsl(var(--muted-foreground));">Our Beers</a>
           <a href="#about" class="text-sm font-medium tracking-wide" style="color: hsl(var(--muted-foreground));">About</a>
           <a href="#find-us" class="text-sm font-medium tracking-wide" style="color: hsl(var(--muted-foreground));">Find Us</a>
         </nav>
 
-        <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn" class="md:hidden" style="padding: 0.5rem; background: transparent; cursor: pointer; color: hsl(var(--foreground));" aria-label="Toggle navigation menu">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="4" x2="20" y1="12" y2="12"></line>
@@ -245,7 +219,6 @@
         </button>
       </div>
 
-      <!-- Mobile Dropdown Nav -->
       <div id="mobile-menu">
         <a href="#beers" class="text-sm font-medium tracking-wide" style="color: hsl(var(--foreground));">Our Beers</a>
         <a href="#about" class="text-sm font-medium tracking-wide" style="color: hsl(var(--foreground));">About</a>
@@ -274,7 +247,6 @@
         </div>
       </section>
 
-      <!-- Divider Line -->
       <div style="height: 1px; width: 100%; background: linear-gradient(to right, transparent, hsl(var(--primary)), transparent);"></div>
 
       <!-- Beers Section -->
@@ -290,7 +262,7 @@
             <!-- Beer 1: Bronze Best Bitter -->
             <div style="border-radius: 8px; overflow: hidden; background: hsl(var(--card) / 0.88); backdrop-filter: blur(8px); border: 1px solid hsl(var(--primary) / 0.3); box-shadow: 0 4px 32px hsl(var(--surface-deep) / 0.6);">
               <div style="aspect-ratio: 4 / 3; overflow: hidden; position: relative;">
-                <img alt="Bronze Best Bitter — Copper and Chrome house bitter" loading="lazy" src="./images/bronze-best-bitter.png" style="width: 100%; height: 100%; object-fit: cover;">
+                <img alt="Bronze Best Bitter — Copper and Chrome house bitter" loading="lazy" src="./Images/bronze-best-bitter.png" style="width: 100%; height: 100%; object-fit: cover;">
                 <div style="position: absolute; inset: 0; background: linear-gradient(to top, hsl(var(--card)) 0%, transparent 50%); pointer-events: none;"></div>
               </div>
               <div class="p-base">
@@ -305,7 +277,7 @@
             <!-- Beer 2: Greasy Throat -->
             <div style="border-radius: 8px; overflow: hidden; background: hsl(var(--card) / 0.88); backdrop-filter: blur(8px); border: 1px solid hsl(var(--primary) / 0.3); box-shadow: 0 4px 32px hsl(var(--surface-deep) / 0.6);">
               <div style="aspect-ratio: 4 / 3; overflow: hidden; position: relative;">
-                <img alt="Greasy Throat — bold hoppy ale from Copper and Chrome" loading="lazy" src="./images/greasy-throat.png" style="width: 100%; height: 100%; object-fit: cover;">
+                <img alt="Greasy Throat — bold hoppy ale from Copper and Chrome" loading="lazy" src="./Images/greasy-throat.png" style="width: 100%; height: 100%; object-fit: cover;">
                 <div style="position: absolute; inset: 0; background: linear-gradient(to top, hsl(var(--card)) 0%, transparent 50%); pointer-events: none;"></div>
               </div>
               <div class="p-base">
@@ -320,7 +292,6 @@
         </div>
       </section>
 
-      <!-- Divider Line -->
       <div style="height: 1px; width: 100%; background: linear-gradient(to right, transparent, hsl(var(--primary)), transparent);"></div>
 
       <!-- About Section -->
@@ -329,7 +300,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
             <div class="flex justify-center">
               <div style="border-radius: 9999px; padding: 2rem; border: 1px solid hsl(var(--primary) / 0.4); background: hsl(var(--card) / 0.85); box-shadow: 0 0 60px hsl(var(--primary) / 0.15);">
-                <img alt="Copper and Chrome Brewery crest" loading="lazy" src="./images/primary.png" style="max-width: 280px; width: 100%; height: auto; object-fit: contain;">
+                <img alt="Copper and Chrome Brewery crest" loading="lazy" src="./Images/primary.png" style="max-width: 280px; width: 100%; height: auto; object-fit: contain;">
               </div>
             </div>
             <div>
@@ -351,7 +322,6 @@
         </div>
       </section>
 
-      <!-- Divider Line -->
       <div style="height: 1px; width: 100%; background: linear-gradient(to right, transparent, hsl(var(--primary)), transparent);"></div>
 
       <!-- Contact / Find Us Section -->
@@ -363,7 +333,7 @@
             <p class="text-base leading-relaxed max-w-lg mx-auto mb-10" style="color: hsl(var(--muted-foreground));">
               Want to know where to find our beers on tap, or get in touch about stocking them? We'd love to hear from you.
             </p>
-            <a href="mailto:info@copperandchrome.co.uk" class="px-8 py-4 font-semibold text-sm tracking-wide" style="display: inline-block; border-radius: 4px; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); box-shadow: 0 0 24px hsl(var(--primary) / 0.3);">
+            <a href="mailto:hello@copperandchrome.co.uk" class="px-8 py-4 font-semibold text-sm tracking-wide" style="display: inline-block; border-radius: 4px; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); box-shadow: 0 0 24px hsl(var(--primary) / 0.3);">
               Get in Touch
             </a>
           </div>
@@ -377,7 +347,7 @@
       <div class="max-w-7xl mx-auto px-6 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
-            <img alt="Copper and Chrome Brewery" src="./images/primary.png" style="max-height: 56px; width: auto; object-fit: contain; margin-bottom: 1rem;">
+            <img alt="Copper and Chrome Brewery" src="./Images/primary.png" style="max-height: 56px; width: auto; object-fit: contain; margin-bottom: 1rem;">
             <p class="text-sm leading-relaxed" style="color: hsl(var(--muted-foreground));">
               Small batch. Big character.<br>Berkshire, UK.
             </p>
@@ -406,7 +376,6 @@
     </footer>
   </div>
 
-  <!-- Mobile Menu Toggle Script -->
   <script>
     const menuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
